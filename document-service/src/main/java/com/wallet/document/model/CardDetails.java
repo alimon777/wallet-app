@@ -12,16 +12,10 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class CardDetails {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class CardDetails extends Layout{
 
     @NotBlank(message = "Card number is required")
     private String cardNumber;
-
-    @NotBlank(message = "Card Holder name is required")
-    private String cardHolderName;
 
     @NotBlank(message = "Card expiry date is required")
     private LocalDate expiryDate; // Consider using LocalDate

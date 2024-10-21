@@ -13,10 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class InsuranceDetails {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class InsuranceDetails extends Layout{
 
     @NotBlank(message = "Insurance provider name is required")
     private String providerName; // Name of the insurance provider

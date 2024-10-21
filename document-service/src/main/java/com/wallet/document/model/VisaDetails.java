@@ -13,11 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class VisaDetails {
-    @Id
-    @GeneratedValue
-    private Long id;
-
+public class VisaDetails extends Layout{
     @NotBlank(message = "Visa type is required")
     private String visaType; // Type of visa (e.g., tourist, student, work)
 

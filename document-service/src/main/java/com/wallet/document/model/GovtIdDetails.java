@@ -15,19 +15,12 @@ import lombok.NoArgsConstructor;
 @Table(uniqueConstraints = {
         @UniqueConstraint(columnNames = {"idType"}, name = "UniqueGovtIdPerPerson")
 })
-public class GovtIdDetails {
-    @Id
-    @GeneratedValue
-    private Long id;
-
+public class GovtIdDetails extends Layout {
     @NotBlank(message = "ID type can't be blank")
     private String idType; // Should be restricted to specific types like Aadhar, PAN, etc.
 
     @NotBlank(message = "ID number can't be blank")
     private String idNumber;
-
-    @NotBlank(message = "Name in ID can't be blank")
-    private String name;
 
     private LocalDate issueDate; // Optional
 

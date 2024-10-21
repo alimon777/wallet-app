@@ -10,19 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class BankDetails {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class BankDetails extends Layout{
 
     @NotBlank(message = "Account number is required")
     private String accountNumber;
 
     @NotBlank(message = "Bank name is required")
     private String bankName;
-
-    @NotBlank(message = "Account holder's name is required")
-    private String holderName;
 
     @NotBlank(message = "IFSC code is required")
     private String ifscCode; // IFSC code
