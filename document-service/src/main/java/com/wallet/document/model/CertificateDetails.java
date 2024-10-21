@@ -12,19 +12,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class CertificateDetails {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class CertificateDetails extends Layout{
 
     @NotBlank(message = "Certificate number is required")
     private String certificateNumber;
 
     @NotBlank(message = "Certificate name is required")
     private String certificateName; // New field for the name of the certificate
-
-    @NotBlank(message = "Name on the certificate is required")
-    private String name; // Name on the certificate
 
     private LocalDate issueDate;
     private LocalDate expiryDate;
