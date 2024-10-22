@@ -29,4 +29,8 @@ public class BankDetailsService {
     public void deleteBankDetails(Long id) {
         bankDetailsRepository.deleteById(id);
     }
+
+    public List<BankDetails> getBankDetailsByFamilyId(int familyId) {
+        return bankDetailsRepository.findByFamilyId(familyId);
+    }
 }

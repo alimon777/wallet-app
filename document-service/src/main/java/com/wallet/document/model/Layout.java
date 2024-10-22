@@ -2,6 +2,7 @@ package com.wallet.document.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,13 +14,13 @@ import lombok.NoArgsConstructor;
 @Inheritance (strategy = InheritanceType.JOINED)
 public class Layout {
 
-    @NotBlank(message="family id is required")
-    private int familyId;
+    @NotNull(message="family id is required")
+    private Long familyId;
 
     @NotBlank(message="name is required")
-    private int nameInDocument;
+    private String nameInDocument;
 
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 }
